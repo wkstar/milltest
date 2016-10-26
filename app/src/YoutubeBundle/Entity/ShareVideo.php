@@ -1,10 +1,21 @@
 <?php
 namespace YoutubeBundle\Entity;
 
+
+use Symfony\Component\Validator\Constraints as Assert;
+
 class ShareVideo
 {
     protected $name;
     protected $email;
+    
+    /**
+     * Just showing I know how, I'd usually add validation for all properties.
+     * @Assert\Length(
+     *      max = 50,
+     *      maxMessage = "Your first name cannot be longer than {{ limit }} characters"
+     * )
+     */
     protected $comment;
     protected $recipientName;
     protected $recipientEmail;

@@ -29,7 +29,10 @@ class VideoController extends Controller
 
   			$emailer->send($subject, $data->getEmail(), $data->getRecipientEmail(), $body);
 
-
+  			//Inform the user.
+  			//I'd usually split this controller out into a few and filter between them with by http method.
+  			//As the controllers grow and functioality becomes falls into more distinct patterns I like to pull code out into service classes and
+  			//leave the controllers as thin as possible.
   			$this->addFlash(
 	            'notice',
 	            'Email was sent!'

@@ -6,6 +6,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class ShareVideoForm extends AbstractType
@@ -14,7 +15,7 @@ class ShareVideoForm extends AbstractType
     {
         $builder->add('name', TextType::class)
                 ->add('email', EmailType::class)
-                ->add('comment', TextType::class)
+                ->add('comment', TextareaType::class)
                 ->add('recipientName', TextType::class)
                 ->add('recipientEmail', EmailType::class)
                 ->add('share', SubmitType::class, array('label' => 'Share'));

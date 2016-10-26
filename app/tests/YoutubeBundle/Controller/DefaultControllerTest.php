@@ -4,7 +4,7 @@ namespace YoutubeBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class DefaultControllerTest extends WebTestCase
+class YoutubeControllerTest extends WebTestCase
 {
     public function testIndex()
     {
@@ -12,6 +12,6 @@ class DefaultControllerTest extends WebTestCase
 
         $crawler = $client->request('GET', '/');
 
-        $this->assertContains('Hello World', $client->getResponse()->getContent());
+        $this->assertContains('<title>Video central!</title>', $client->getResponse()->getContent());
     }
 }
