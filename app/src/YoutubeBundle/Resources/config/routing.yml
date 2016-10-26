@@ -1,3 +1,3 @@
 youtube_homepage:
     path:     /
-    defaults: { _controller: YoutubeBundle:Default:index }
+    defaults: { _controller: YoutubeBundle:Video:show }

@@ -1,3 +1,4 @@
 Assumed libraries:
 
 Composer.
+Curl.

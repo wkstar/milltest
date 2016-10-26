@@ -1,7 +1,6 @@
-# This file is a "template" of what your parameters.yml file should look like
-# Set parameters here that may be different on each deployment target of the app, e.g. development, staging, production.
-# http://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
 parameters:
+    youtube_key: "AIzaSyBt4cU1mJ9Y8lxUES0ad6HoPVgFiMTHQmQ"
+    mill_channel: "UCPJZo6tTnvIBROdmeovhP8A"
     database_host:     127.0.0.1
     database_port:     ~
     database_name:     symfony
