@@ -3,6 +3,8 @@
 parameters:
   guzzleclient.class: GuzzleHttp\Client
   apirequest.class: YoutubeBundle\Util\APIRequest
+  email.class: YoutubeBundle\Util\Email
+  swiftmailercustom.class: Swift_Message
 
 services:
     guzzleclient:
@@ -10,3 +12,9 @@ services:
     apirequest:
         class: "%apirequest.class%"
         arguments: ["@guzzleclient"]
+    emailmessage:
+        class: EmailmessageFactory
+        factory: ["%swiftmailercustom.class%", newInstance]
+    emailsender:
+        class: "%email.class%"
+        arguments: ["@mailer", "@emailmessage"]

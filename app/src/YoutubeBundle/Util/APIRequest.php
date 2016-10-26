@@ -17,9 +17,6 @@ class APIRequest
         $body = (string) $response->getBody();
         $json = json_decode($body, true);
         if (json_last_error()) {
-            //todo
-            var_dump($body);
-            //die;
             throw new \Exception(json_last_error_msg());
         }
         return $json;
