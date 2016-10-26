@@ -1,9 +1,9 @@
 <?php
 
-namespace AppBundle;
+namespace YoutubeBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class AppBundle extends Bundle
+class YoutubeBundle extends Bundle
 {
 }
